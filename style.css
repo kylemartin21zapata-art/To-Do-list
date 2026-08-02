@@ -24,7 +24,7 @@ body {
 
   background-color: rgb(20, 20, 20);
 
-  border-right: 1px solid rgb(48, 48, 48);
+  border-right: 1px solid rgb(26, 26, 26);
 }
 
 .menu-part {
@@ -43,6 +43,25 @@ body {
   user-select: none;
 }
 
+.search-bar {
+  user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.magny-glass {
+  font-size: 20px;
+  color: rgb(129, 129, 129);
+
+  margin-left: 10px;
+
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 .search-bar input {
   font-family: "Inter", sans-serif;
   font-size: 20px;
@@ -52,38 +71,113 @@ body {
   color: #f5f5f5; /* Text na tina-type */
 
   border: none;
-  background-color: rgb(70, 70, 70);
-
+  background-color: transparent;
   padding: 10px;
   border-radius: 10px;
 }
 
 .search-bar input::placeholder {
-  color: #f5f5f5;
+  color: rgb(129, 129, 129);
+}
+
+.search-bar input:focus {
+  outline: none;
 }
 
 .filters {
   display: flex;
   flex-direction: column;
 
-  margin-top:40px;
+  margin-top: 40px;
+  margin-right: 33px;
+
+  -webkit-user-drag: none;
+  user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-.filters button {
+.filters input {
+  display: none;
+}
+
+.filters label {
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: bold;
+
+  display: block;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgb(245, 245, 245);
 
   margin-bottom: 10px;
+}
 
-  width: 260px;
-  padding: 15px 20px;
-  padding-left: 35px;
+.filters input:checked + label {
+  background: rgb(30, 30, 30);
+  color: rgb(245, 245, 245);
+}
 
-  background-color: rgb(25, 25, 25);
-  border:none;
-  border-radius: 10px;
+.filters label:active {
+  transform: translateY(2px) scale(0.98);
+  background: #202020;
+}
 
+.task-cpntrol {
+  flex: 1;
+  padding: 30px;
+
+  height: 100vh;
+}
+
+.task-control h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 34px;
   color: #f5f5f5;
-  text-align: left;
+
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.todo-bar {
+  display: flex;
+
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.todo-bar button {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  background-color: rgb(30, 30, 30);
+  color: #f5f5f5;
+
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+
   cursor: pointer;
+}
+
+.name-list {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #f5f5f5;
+
+  margin-left: 15px;
+}
+
+.todo-bar button:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.todo-bar button:active {
+  transform: translateY(2px) scale(0.98);
+  background: #202020;
 }

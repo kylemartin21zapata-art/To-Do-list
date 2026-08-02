@@ -17,48 +17,49 @@
           <h3>Menu</h3>
         </div>
         <div class="search-bar">
+          <span class="magny-glass">🔍︎</span>
           <input
-            type="text"
-            placeholder=" 🔎  Search"
+            type="search"
+            placeholder="Search"
             name="Search bar"
             class="search-bar"
           />
         </div>
 
         <div class="filters">
-          <button data-filter="active">Active</button>
+          <input type="radio" id="active" name="filter" checked />
+          <label for="active">Active</label>
 
-          <button data-filter="completed">Completed</button>
+          <input type="radio" id="show-completed" name="filter" />
+          <label for="show-completed">Show Completed</label>
         </div>
       </aside>
 
       <section class="task-control">
-        <div class="todo-bar">
-          <form class="add-task">
-            <input type="text" placeholder="Enter task here" name="entertask" />
+        <h1>To-Do List</h1>
 
-            <button type="submit">Add</button>
-          </form>
+        <div class="todo-bar">
+          <button type="add-task">✚<span class="name-list">Add List</span></button>
         </div>
 
         <section class="task-lists">
           <ul>
             <li>
               <input type="checkbox" /><span>Learn HTML</span
-              ><button type="button">Edit</button
-              ><button type="button">Delete</button>
+              ><button type="edit">Edit</button
+              ><button type="delete">Delete</button>
             </li>
 
             <li>
               <input type="checkbox" /><span>Learn CSS</span
-              ><button type="button">Edit</button
-              ><button type="button">Delete</button>
+              ><button type="edit">Edit</button
+              ><button type="delete">Delete</button>
             </li>
 
             <li>
               <input type="checkbox" /><span>JavaScript</span>
-              <button type="button">Edit</button
-              ><button type="button">Delete</button>
+              <button type="edit">Edit</button
+              ><button type="delete">Delete</button>
             </li>
           </ul>
         </section>
